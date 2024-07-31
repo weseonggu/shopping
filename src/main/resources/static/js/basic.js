@@ -286,7 +286,10 @@ function addFolder() {
             folderNames
         })
     }).done(function (data, textStatus, xhr) {
+        console.log(data);
         if(data !== '') {
+            console.log("여기");
+
             alert("중복된 폴더입니다.");
             return;
         }
@@ -295,6 +298,7 @@ function addFolder() {
         window.location.reload();
     })
         .fail(function(xhr, textStatus, errorThrown) {
+            console.log("실패");
             alert("중복된 폴더입니다.");
         });
 }
